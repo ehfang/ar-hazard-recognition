@@ -7,9 +7,9 @@
 ![OpenAI API](https://img.shields.io/badge/OpenAI%20API-GPT--4o-412991?logo=openai&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Android%20%2F%20Horizon%20OS-3DDC84?logo=android&logoColor=white)
 
-![Two scans: a crane lift returns a Struck-by checklist whose steps are checked off, then a worker on roof framing returns a Falls checklist](Docs/media/walkthrough-scan.gif)
+![Two scans: a crane lift returns a Struck-by checklist; steps are checked off and the panel is grabbed and pulled closer; then a worker on roof framing returns a Falls checklist](Docs/media/walkthrough-scan.gif)
 
-<sub>Unity editor capture of the real app. The photo stands in for the Quest passthrough feed; the checklist is the actual GPT-4o response, rendered by the app's UI. Interactions were scripted in the editor (the white dot marks the fingertip). Full 36-second walkthrough, including moving and minimizing the panel: [walkthrough.mp4](Docs/media/walkthrough.mp4).</sub>
+<sub>Unity editor capture of the real app. The photo stands in for the Quest passthrough feed; the checklist is the actual GPT-4o response, rendered by the app's UI. Interactions were scripted in the editor (the white dot marks the fingertip). Full 36-second walkthrough, including minimizing the panel to its status slip: [walkthrough.mp4](Docs/media/walkthrough.mp4).</sub>
 
 ---
 
