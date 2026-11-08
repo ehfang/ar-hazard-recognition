@@ -1,0 +1,28 @@
+# No Git LFS rules needed: the Phase 1 audit found no files over 50 MB.
+
+# Normalize line endings for text files
+* text=auto
+
+# Unity YAML assets: keep as text so diffs work
+*.unity    text eol=lf
+*.prefab   text eol=lf
+*.asset    text eol=lf
+*.mat      text eol=lf
+*.meta     text eol=lf
+*.anim     text eol=lf
+*.controller text eol=lf
+
+# Binary assets
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.psd  binary
+*.ttf  binary
+*.otf  binary
+*.fbx  binary
+*.wav  binary
+*.mp3  binary
+*.mp4  binary
+*.onnx binary
+*.sentis binary
