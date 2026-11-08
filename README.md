@@ -7,9 +7,9 @@
 ![OpenAI API](https://img.shields.io/badge/OpenAI%20API-GPT--4o-412991?logo=openai&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Android%20%2F%20Horizon%20OS-3DDC84?logo=android&logoColor=white)
 
-![Scanning a crane lift: the user pokes Scan, the panel shows "Scanning", then a Struck-by checklist appears and steps are checked off](Docs/media/walkthrough-scan.gif)
+![Two scans: a crane lift returns a Struck-by checklist whose steps are checked off, then a worker on roof framing returns a Falls checklist](Docs/media/walkthrough-scan.gif)
 
-<sub>Unity editor capture of the real app. The photo stands in for the Quest passthrough feed; the checklist is the actual GPT-4o response, rendered by the app's UI. Interactions were scripted in the editor (the white dot marks the fingertip). Full 36-second walkthrough, including moving and minimizing the panel and a second scan: [walkthrough.mp4](Docs/media/walkthrough.mp4).</sub>
+<sub>Unity editor capture of the real app. The photo stands in for the Quest passthrough feed; the checklist is the actual GPT-4o response, rendered by the app's UI. Interactions were scripted in the editor (the white dot marks the fingertip). Full 36-second walkthrough, including moving and minimizing the panel: [walkthrough.mp4](Docs/media/walkthrough.mp4).</sub>
 
 ---
 
@@ -85,7 +85,7 @@ The response contract the prompt enforces:
 
 **A checklist, not a paragraph.** The output is written to be *acted on*. Each step starts with a verb and ends with a *Verify:* check you can see or touch, so the list doubles as an inspection aid. Checking a step strikes it through and moves it to the bottom, so the work that's left is always at the top of the panel.
 
-**Precision over recall.** A tool that cries wolf gets ignored. The prompt only allows hazards with a cue "a reviewer could literally circle in the image," bans claims of absence ("no guardrail") unless the view really shows it, and asks for "not clearly visible from this view" instead of guessing. Prompts were refined over **8 rounds of evaluation against about 50 expert-annotated images**.
+**Precision over recall.** A tool that cries wolf gets ignored. The prompt only allows hazards with a cue "a reviewer could literally circle in the image," bans claims of absence ("no guardrail") unless the view really shows it, and asks for "not clearly visible from this view" instead of guessing. The prompt went through **10 versions (a baseline and nine revisions), each scored against the same 42 expert-annotated images**.
 
 **Staying aware of the surroundings.** Because the app runs in passthrough, the user keeps seeing the real site while they read and work through the checklist; the panel is a small overlay, not a replacement for their view.
 
@@ -161,7 +161,7 @@ Docs/media/                           screenshots and walkthrough video for this
 
 ## Evaluation data
 
-The prompt was evaluated against images drawn from the **OSHA Training Institute's Construction Focus Four hazard recognition training materials** (falls, struck-by, caught-in/between, electrocution), annotated by experts. Those materials are not redistributed in this repository.
+Across its 10 versions, the prompt was evaluated against 42 images drawn from the **OSHA Training Institute's Construction Focus Four hazard recognition training materials** (falls, struck-by, caught-in/between, electrocution), annotated by experts. Those materials are not redistributed in this repository.
 
 > Source: OSHA Training Institute, *Construction Focus Four Training* (Falls, Struck-By, Caught-In or -Between, Electrocution). U.S. Department of Labor, Occupational Safety and Health Administration.
 
